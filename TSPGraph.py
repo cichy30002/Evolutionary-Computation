@@ -12,7 +12,7 @@ class Graph:
         self.points = list(zip(self.data_frame['x'],self.data_frame['y']))
         self.dist_matrix = distance.cdist(self.points, self.points, 'euclidean')
         np.rint(self.dist_matrix, out=self.dist_matrix)
-        self.dist_matrix = self.dist_matrix.astype(np.int)
+        self.dist_matrix = self.dist_matrix.astype(int)
         self.objective = self.dist_matrix + np.array(self.data_frame['cost'])
 
     def cycle_length(self, cycle):
