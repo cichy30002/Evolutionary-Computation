@@ -4,7 +4,7 @@ from scipy.spatial import distance
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 from IPython.display import HTML
-
+from numba import jit
 
 class Graph:
     def __init__(self, dataset: chr):
